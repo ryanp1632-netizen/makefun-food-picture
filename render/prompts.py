@@ -37,6 +37,13 @@ STYLES = {
         "field, rich warm true-to-life colours, mouth-watering, award-winning commercial food photography. No "
         "text, no watermark."
     ),
+    "izakaya": (
+        "Professional food photograph taken with a macro lens at f/2.8, a slightly elevated three-quarter "
+        "close-up where the dish fills most of the frame. Set on a dark wooden counter in a cosy ramen shop at "
+        "night, with warm amber lamps glowing as soft round bokeh in the background. Warm side light makes the "
+        "broth and toppings glisten. Realistic tactile textures, natural imperfections, rich warm true-to-life "
+        "colours, mouth-watering, award-winning food magazine photography. No text, no watermark."
+    ),
 }
 STYLE = STYLES["dark"]
 
@@ -82,6 +89,15 @@ DISHES = {
         "long glossy golden drips onto the bottom bun. Crispy bacon rashers, crisp green lettuce, a slice of "
         "ripe tomato, pickles, and a shiny toasted sesame-seed brioche bun. Meat juices glisten. Crispy golden "
         "fries with flaky salt beside it."
+    ),
+    # Ramen is what most 93%+ entries show; Z-Image's first ramens had thin broth in a plain white bowl.
+    "ramen2": (
+        "A steaming bowl of rich tonkotsu ramen in a dark speckled stoneware bowl that fills the frame. The broth "
+        "is creamy, opaque and golden with glistening droplets of fat and swirls of red chili oil. Wooden "
+        "chopsticks lift a thick bundle of glossy wavy noodles out of the broth. Four slices of torched chashu "
+        "pork belly with caramelised edges are fanned on one side, a halved soy-marinated egg shows a jammy "
+        "orange yolk, a sheet of nori stands at the back, with sliced green scallions, sesame seeds and bean "
+        "sprouts. Real wisps of steam rise from the hot broth."
     ),
     "lava2": (
         "A warm chocolate lava cake on a matte dark plate, a spoon has just broken it open so thick glossy molten "
