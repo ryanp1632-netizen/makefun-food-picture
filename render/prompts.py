@@ -27,6 +27,15 @@ STYLES = {
         "Shallow depth of field with a softly blurred restaurant background in warm wood tones. True-to-life "
         "colours, appetizing, freshly served, award-winning food magazine photography. No text, no watermark."
     ),
+    # The best burgers on the board are tight crops on near-black with warm rim light.
+    "studio": (
+        "Professional advertising food photograph taken with a macro lens, a tight close-up where the food fills "
+        "almost the whole frame. Dark, moody charcoal background fading to black, a warm golden rim light from "
+        "behind that makes every edge and drip glow, soft fill light from the front. Ultra-realistic tactile "
+        "textures: crunchy caramelised crust, glistening juices, glossy melting sauce, tiny crumbs. Shallow depth of "
+        "field, rich warm true-to-life colours, mouth-watering, award-winning commercial food photography. No "
+        "text, no watermark."
+    ),
 }
 STYLE = STYLES["dark"]
 
@@ -54,6 +63,30 @@ DISHES = {
     "steak": (
         "Thick seared ribeye steak sliced to show a juicy pink medium-rare centre on a dark wooden board, herb "
         "garlic butter melting over the slices, rosemary, roasted garlic, flaky salt, steam rising."
+    ),
+    # v4 lessons from the judge on v3 ("steam looks painted", "cheese-pickle zone muddled", "fries look off"):
+    # no steam, a clear layer order, crisp fries.
+    "burger2": (
+        "A juicy double bacon cheeseburger on a dark slate board, seen at eye level. Clear layers from the bottom: "
+        "a toasted brioche bun, crisp green lettuce, a thick slice of ripe tomato, a seared beef patty with a dark "
+        "crust and slices of cheddar melting over its edges in glossy drips, a second patty with more melted "
+        "cheddar, crispy bacon rashers, and a shiny golden sesame-seed top bun. Meat juices glisten. A pile of "
+        "crispy golden shoestring fries with flaky salt beside it."
+    ),
+    # burger2 came out clean but tame (one patty, little melt); the judge's first criterion is hunger, and
+    # "molten cheese dripping" is what won v3 its games. Keep the drips, keep it free of steam.
+    "burger3": (
+        "A towering bacon cheeseburger on a dark slate board, seen at eye level. Two thick seared beef patties "
+        "with dark caramelised crusts are stacked, each draped in molten cheddar that drips down the sides in "
+        "long glossy golden drips onto the bottom bun. Crispy bacon rashers, crisp green lettuce, a slice of "
+        "ripe tomato, pickles, and a shiny toasted sesame-seed brioche bun. Meat juices glisten. Crispy golden "
+        "fries with flaky salt beside it."
+    ),
+    "lava2": (
+        "A warm chocolate lava cake on a matte dark plate, a spoon has just broken it open so thick glossy molten "
+        "chocolate pours out and pools on the plate. A scoop of vanilla bean ice cream with visible vanilla "
+        "specks is just starting to melt beside it, three fresh raspberries, a light dusting of cocoa powder and "
+        "a few flakes of sea salt."
     ),
     "pancakes": (
         "Tall stack of fluffy golden pancakes, maple syrup pouring and cascading down the sides, a melting pat of "
