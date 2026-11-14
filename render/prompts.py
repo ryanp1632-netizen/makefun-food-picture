@@ -110,6 +110,17 @@ DISHES = {
         "of nori stands at the back, with sliced green scallions, sesame seeds and bean sprouts. Real wisps of "
         "steam rise from the hot broth."
     ),
+    # v7 (ramen3) lost its one game for "lifted noodles look slightly uniform and plasticky".
+    "ramen4": (
+        "A steaming bowl of rich tonkotsu ramen in a dark speckled stoneware bowl that fills the frame. The broth "
+        "is creamy, opaque and golden with glistening droplets of fat and a few small drops of red chili oil. A "
+        "pair of wooden chopsticks enters from the top right corner, held out of frame with no hand visible, and "
+        "lifts springy, wavy, golden-yellow alkaline noodles high out of the broth, each strand distinct and "
+        "glistening, broth dripping from them. Torched chashu pork belly slices with caramelised edges and soft "
+        "translucent fat are fanned on one side, two halves of a soy-marinated egg show jammy orange yolks, a "
+        "sheet of nori stands at the back, with sliced green scallions and sesame seeds. Real wisps of steam rise "
+        "from the hot broth."
+    ),
     "lava2": (
         "A warm chocolate lava cake on a matte dark plate, a spoon has just broken it open so thick glossy molten "
         "chocolate pours out and pools on the plate. A scoop of vanilla bean ice cream with visible vanilla "
