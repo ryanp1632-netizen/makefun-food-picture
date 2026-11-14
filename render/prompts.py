@@ -30,8 +30,9 @@ STYLES = {
     # The best burgers on the board are tight crops on near-black with warm rim light.
     "studio": (
         "Professional advertising food photograph taken with a macro lens, a tight close-up where the food fills "
-        "almost the whole frame. Dark, moody charcoal background fading to black, a warm golden rim light from "
-        "behind that makes every edge and drip glow, soft fill light from the front. Ultra-realistic tactile "
+        # v4 lost on "a glowing ember-like artefact on the bun's edge" from asking for a glowing rim light.
+        "almost the whole frame. Dark, moody charcoal background, soft warm key light from the side and a gentle "
+        "natural backlight, realistic soft shadows, no glow or lens flare. Ultra-realistic tactile "
         "textures: crunchy caramelised crust, glistening juices, glossy melting sauce, tiny crumbs. Shallow depth of "
         "field, rich warm true-to-life colours, mouth-watering, award-winning commercial food photography. No "
         "text, no watermark."
