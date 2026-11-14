@@ -14,7 +14,7 @@ import torch
 from accelerate import cpu_offload
 from diffusers import FluxPipeline, FluxTransformer2DModel, GGUFQuantizationConfig
 
-from prompts import DISHES, STYLE
+from prompts import DISHES, STYLES
 
 
 def seed_list(spec: str) -> list[int]:
@@ -36,6 +36,7 @@ def main() -> None:
     ap.add_argument("--dish", default="ramen", help="comma-separated: " + ",".join(sorted(DISHES)))
     ap.add_argument("--seeds", default="1-4")
     ap.add_argument("--steps", type=int, default=4)
+    ap.add_argument("--style", default="dark", choices=sorted(STYLES))
     ap.add_argument("--size", type=int, default=1024)
     ap.add_argument("--offload", default="model", choices=["none", "model", "group"])
     args = ap.parse_args()
@@ -49,7 +50,7 @@ def main() -> None:
     embeds = {}
     with torch.no_grad():
         for dish in dishes:
-            prompt = f"{DISHES[dish]} {STYLE}"
+            prompt = f"{DISHES[dish]} {STYLES[args.style]}"
             pe, ppe, _ = pipe.encode_prompt(prompt=prompt, prompt_2=prompt, device="cuda", max_sequence_length=256)
             embeds[dish] = (pe.cpu(), ppe.cpu())
             print("encoded", dish, flush=True)
@@ -70,6 +71,7 @@ def main() -> None:
         pipe.transformer.enable_group_offload(
             onload_device=torch.device("cuda"), offload_device=torch.device("cpu"),
             offload_type="block_level", num_blocks_per_group=4, use_stream=True,
+            low_cpu_mem_usage=True,  # don't pin the whole 8-bit model in host memory at once (CUDA OOM)
         )
         pipe.vae.to("cuda")
     else:
@@ -89,7 +91,7 @@ def main() -> None:
                 guidance_scale=0.0,
                 generator=torch.Generator("cpu").manual_seed(seed),
             ).images[0]
-            path = os.path.join(args.out, f"flux_{dish}_{seed}.png")
+            path = os.path.join(args.out, f"flux_{args.style}_{dish}_{seed}.png")
             image.save(path)
             print("wrote", path, flush=True)
 

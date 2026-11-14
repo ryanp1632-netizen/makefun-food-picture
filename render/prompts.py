@@ -4,16 +4,27 @@ FLUX.1-schnell reads at most 256 T5 tokens and CLIP only the first 77, so each p
 and keeps the photographic style short.
 """
 
-STYLE = (
-    "Close-up editorial food photography, low three-quarter angle, the dish fills the frame, shallow depth of "
-    "field, dark moody background with warm bokeh, golden backlight, glossy highlights, mouth-watering."
-)
+STYLES = {
+    "dark": (
+        "Close-up editorial food photography, low three-quarter angle, the dish fills the frame, shallow depth "
+        "of field, dark moody background with warm bokeh, golden backlight, glossy highlights, mouth-watering."
+    ),
+    # The judge's strongest house images were believable, cleanly lit food in soft daylight, and it marked our
+    # dark, high-contrast burger down as "plasticky" and "AI sheen". This style asks for a real photograph.
+    "window": (
+        "Real candid food photograph taken with a full-frame camera and 85mm lens, soft natural window light from "
+        "the side, gentle shadows, true-to-life colours, crisp natural texture, shallow depth of field, the dish "
+        "fills the frame, fresh and mouth-watering, nothing artificial."
+    ),
+}
+STYLE = STYLES["dark"]
 
 DISHES = {
     "ramen": (
-        "Steaming bowl of tonkotsu ramen in a dark stoneware bowl on a rustic wooden table. Wooden chopsticks "
-        "lift glossy golden noodles from creamy broth. Torched chashu pork with charred edges, a halved ramen egg "
-        "with a jammy orange yolk, green scallions, sesame seeds, nori, red chili oil, white steam rising."
+        "Steaming bowl of tonkotsu ramen, a wide speckled ceramic bowl filling the frame, full to the brim. "
+        "A pair of wooden chopsticks from the upper right lifts glossy golden noodles high above the rich amber "
+        "broth. Neatly fanned slices of seared chashu pork, a halved ramen egg with a jammy orange yolk, a "
+        "standing sheet of nori, green scallions, sesame seeds, clouds of white steam rising."
     ),
     "burger": (
         "Towering double cheeseburger on a dark slate board: glossy toasted brioche bun with sesame seeds, two "
@@ -36,5 +47,22 @@ DISHES = {
     "pancakes": (
         "Tall stack of fluffy golden pancakes, maple syrup pouring and cascading down the sides, a melting pat of "
         "butter on top, fresh blueberries and raspberries, powdered sugar."
+    ),
+    "carbonara": (
+        "Bowl of spaghetti carbonara twirled into a glossy nest, silky creamy egg and pecorino sauce coating every "
+        "strand, crispy golden guanciale pieces, freshly cracked black pepper, a shower of grated cheese, a fork "
+        "resting on the side, steam rising."
+    ),
+    "tart": (
+        "Slice of fresh strawberry tart on a white plate, buttery golden crumbly pastry, thick vanilla custard "
+        "cream, glossy glazed ripe strawberries piled high, a few mint leaves, dusting of icing sugar."
+    ),
+    "salmon": (
+        "Pan-seared salmon fillet with crispy golden skin and a flaky juicy pink centre on a white plate, lemon "
+        "butter sauce glistening, a lemon wedge, fresh dill, tender asparagus, steam rising."
+    ),
+    "cinnamon": (
+        "Warm gooey cinnamon roll fresh from the oven, thick cream cheese icing melting and dripping down the "
+        "swirled golden layers, cinnamon sugar glistening, on a small plate, steam rising."
     ),
 }
