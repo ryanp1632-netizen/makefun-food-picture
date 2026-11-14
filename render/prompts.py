@@ -16,6 +16,17 @@ STYLES = {
         "the side, gentle shadows, true-to-life colours, crisp natural texture, shallow depth of field, the dish "
         "fills the frame, fresh and mouth-watering, nothing artificial."
     ),
+    # For Z-Image-Turbo (Qwen3 encoder, up to 512 tokens): concrete camera details and small real-world
+    # imperfections read as a photograph rather than a render.
+    "photo": (
+        # (No camera brand here: Z-Image drew the named camera into the frame.)
+        "Professional food photograph taken with a macro lens at f/4. "
+        "Warm, soft natural window light from the left with a gentle fill, realistic shadows. The food is the hero "
+        "and fills most of the frame, seen from a slightly elevated three-quarter angle. Every texture is real and "
+        "tactile: crisp edges, glistening fat and sauce, tiny crumbs and imperfections, natural irregular shapes. "
+        "Shallow depth of field with a softly blurred restaurant background in warm wood tones. True-to-life "
+        "colours, appetizing, freshly served, award-winning food magazine photography. No text, no watermark."
+    ),
 }
 STYLE = STYLES["dark"]
 
